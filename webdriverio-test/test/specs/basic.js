@@ -14,7 +14,9 @@ describe('WebdriverIO-HomepageTest1', () => {
         //allureReporter.addFeature('Feature')
         await browser.url('https://webdriver.io')
         const title = await browser.getTitle()
-        assert.strictEqual(title, 'WebdriverIO · Next-gen WebDriver test framework for Node.js')
+        assert.strictEqual(title, 'WebdriverIO · Next-gen WebDriver test framework for Node.jss')
     })    
 })
+
+
 
