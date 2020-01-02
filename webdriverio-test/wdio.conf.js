@@ -1,3 +1,5 @@
+const { addFeature } = require('@wdio/allure-reporter').default
+
 exports.config = {
     //
     // ====================
@@ -123,7 +125,11 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters: ['spec'],
+    reporters: [['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: true,
+    }]],
  
     //
     // Options to be passed to Mocha.

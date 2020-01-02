@@ -2,8 +2,10 @@ const assert = require('assert')
 
 describe('webdriver.io page', () => {
     it('should have the right title', async () => {
+        //allureReporter.addFeature('Feature')
         await browser.url('https://webdriver.io')
         const title = await browser.getTitle()
         assert.strictEqual(title, 'WebdriverIO · Next-gen WebDriver test framework for Node.js')
     })
 })
+
